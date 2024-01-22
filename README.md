@@ -52,14 +52,14 @@ cheyenne:
     #project: XXXXXXXX
     name: dask-worker-cheyenne
     cores: 18 # Total number of cores per job
-    memory: '109GB' # Total amount of memory per job
+    memory: "109GB" # Total amount of memory per job
     processes: 18 # Number of Python processes per job
     interface: ib0 # Network interface to use like eth0 or ib0
     queue: regular
-    walltime: '01:00:00'
+    walltime: "01:00:00"
     resource-spec: select=1:ncpus=36:mem=109GB
-    log-directory: '/glade/scratch/${USER}/dask/cheyenne/logs'
-    local-directory: '/glade/scratch/${USER}/dask/cheyenne/local-dir'
+    log-directory: "/glade/scratch/${USER}/dask/cheyenne/logs"
+    local-directory: "/glade/scratch/${USER}/dask/cheyenne/local-dir"
     job-extra: []
     env-extra: []
     death-timeout: 60
@@ -69,14 +69,14 @@ casper-dav:
     #project: XXXXXXXX
     name: dask-worker-casper-dav
     cores: 2 # Total number of cores per job
-    memory: '25GB' # Total amount of memory per job
+    memory: "25GB" # Total amount of memory per job
     processes: 1 # Number of Python processes per job
     interface: ib0
-    walltime: '01:00:00'
+    walltime: "01:00:00"
     resource-spec: select=1:ncpus=1:mem=25GB
     queue: casper
-    log-directory: '/glade/scratch/${USER}/dask/casper-dav/logs'
-    local-directory: '/glade/scratch/${USER}/dask/casper-dav/local-dir'
+    log-directory: "/glade/scratch/${USER}/dask/casper-dav/logs"
+    local-directory: "/glade/scratch/${USER}/dask/casper-dav/local-dir"
     job-extra: []
     env-extra: []
     death-timeout: 60
@@ -85,15 +85,15 @@ hobart:
   pbs:
     name: dask-worker-hobart
     cores: 10 # Total number of cores per job
-    memory: '96GB' # Total amount of memory per job
+    memory: "96GB" # Total amount of memory per job
     processes: 10 # Number of Python processes per job
     # interface: null              # ib0 doesn't seem to be working on Hobart
     queue: medium
-    walltime: '08:00:00'
+    walltime: "08:00:00"
     resource-spec: nodes=1:ppn=48
-    log-directory: '/scratch/cluster/${USER}/dask/hobart/logs'
-    local-directory: '/scratch/cluster/${USER}/dask/hobart/local-dir'
-    job-extra: ['-r n']
+    log-directory: "/scratch/cluster/${USER}/dask/hobart/logs"
+    local-directory: "/scratch/cluster/${USER}/dask/hobart/local-dir"
+    job-extra: ["-r n"]
     env-extra: []
     death-timeout: 60
 
@@ -101,15 +101,15 @@ izumi:
   pbs:
     name: dask-worker-izumi
     cores: 10 # Total number of cores per job
-    memory: '96GB' # Total amount of memory per job
+    memory: "96GB" # Total amount of memory per job
     processes: 10 # Number of Python processes per job
     # interface: null              # ib0 doesn't seem to be working on Hobart
     queue: medium
-    walltime: '08:00:00'
+    walltime: "08:00:00"
     resource-spec: nodes=1:ppn=48
-    log-directory: '/scratch/cluster/${USER}/dask/izumi/logs'
-    local-directory: '/scratch/cluster/${USER}/dask/izumi/local-dir'
-    job-extra: ['-r n']
+    log-directory: "/scratch/cluster/${USER}/dask/izumi/logs"
+    local-directory: "/scratch/cluster/${USER}/dask/izumi/local-dir"
+    job-extra: ["-r n"]
     env-extra: []
     death-timeout: 60
 ```
